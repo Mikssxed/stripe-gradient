@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Stripe Gradient</title>
+        <script src="Gradient.js" ></script>
+    </head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+        /* '#F408F0', '#EB0843', '#8F07EA', "#A20D34", "#4D0E94", "#D00CCB", "#FB49FF", "#FF2D70", "#9E30FF" */
+        #gradient-canvas {
+            --gradient-color-1: #F408F0;
+            --gradient-color-2: #EB0843;
+            --gradient-color-3: #8F07EA;
+            --gradient-color-4: #A20D34;
+            --gradient-color-5: #4D0E94;
+            --gradient-color-6: #D00CCB;
+            --gradient-color-7: #FB49FF;
+            --gradient-color-8: #FF2D70;
+            --gradient-color-9: #9E30FF;
+        }
+    </style>
+    <body>
+        <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+        <script>
+            var gradient = new Gradient()
+
+
+            gradient.initGradient('#gradient-canvas');
+            // gradient.updateFrequency(0.0005) //number of hard lines
+            //to change speed of colors change noiseSpeed
+            //to change speed of colors going to left change noiseFlow
+            gradient.updateFrequency(0.00015)
+            console.log(gradient)
+        </script>
+    </body>
+</html>
